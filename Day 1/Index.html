@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        table {
+            text-align: left;
+            position: relative;
+            border-collapse: collapse;
+            background-color: #f6f6f6;
+        }
+
+        td,
+        th {
+            border: 1px solid #999;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            transition: .3s all;
+        }
+
+        th {
+            background: rgb(112, 9, 9);
+            color: white;
+            border-radius: 0;
+            position: sticky;
+            top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        .heading{
+            font-size: 25px;
+            padding: 20px;
+            color: #121211;
+            font-weight: 500;
+            transition:.3s ease-in-out;
+        }
+        .heading:hover{
+            color: #ea0404;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .primary {
+            background-color: #ea0404
+        }
+
+        tfoot>tr {
+            background: black;
+            color: white;
+        }
+
+        tbody>tr>td:hover {
+            font-size: 23px;
+            font-weight: 500;
+            background-color: #181b1b;
+            color: aquamarine;
+        }
+
+        .Fotter {
+            text-align: center;
+
+            & i {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption class="heading">Try Your your self</caption>
+        <thead>
+            <tr>
+                <th class="primary" scope="col">Name</th>
+                <th scope="col">Profession</th>
+                <th scope="col">Hobby</th>
+                <th scope="col">Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"> Arif</th>
+                <td>Student</td>
+                <td>To be a programmer</td>
+                <td>Web Development and Design</td>
+            </tr>
+            <tr>
+                <th scope="row">Ajmal</th>
+                <td>Student</td>
+                <td>To be a Softer Engenner</td>
+                <td>Python and Machine Learning</td>
+            </tr>
+            <tr>
+                <th scope="row">Khusbu</th>
+                <td>Nothing</td>
+                <td>UI/UX Designer</td>
+                <td>Graphic Designer</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- <th></th> -->
+                <td colspan="5" class="Fotter"><i>Be a good programmer</i></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
