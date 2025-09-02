@@ -1,0 +1,254 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 50px 1s50px;
+}
+
+.btn {
+	padding: 10px 35px;
+	color: #cac5c5;
+	font-size: 1.2em;
+	font-weight: lighter;
+	position: relative;
+	border: initial;
+	outline: none;
+	margin: 10px;
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 3px;
+	background: #3e3838;
+	cursor: pointer;
+
+}
+
+.btn-background-slide::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(255, 136, 0);
+	transition: transform 400ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: left;
+	z-index: -1;
+
+
+}
+
+.btn-background-slide:hover {
+	color: white;
+}
+
+.btn-background-slide:hover::before,
+.btn-background-slide:focus::before {
+	transform: scaleX(1);
+}
+
+/**2nd button**/
+
+button.btn.btn-background-circle-in::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #db4242;
+	z-index: -1;
+	transition: transform 400ms ease-in-out;
+	transform: scale(1.5);
+	border-radius: 50%;
+
+}
+
+button.btn.btn-background-circle-in {
+	color: white;
+}
+
+button.btn.btn-background-circle-in:hover::before,
+button.btn.btn-background-circle-in:focus::before {
+	transform: scale(0);
+}
+
+
+/**3rd button**/
+
+button.btn.btn-background-circle-out::before {
+	content: ''
+	;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ce1a83;
+	z-index: -1;
+	transition: transform 400ms ease-in-out;
+	border-radius: 75%;
+	transform: scale(0);
+	transform-origin: center;
+}
+
+button.btn.btn-background-circle-out {
+	color: white;
+}
+
+button.btn.btn-background-circle-out:hover::before,
+button.btn.btn-background-circle-out:focus::before {
+	transform: scale(1.5);
+}
+
+/**4th button**/
+
+button.btn.btn-background-underline::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(236, 183, 83, 0.692);
+	height: 12px;
+	transition: .5s;
+	transform: scaleX(0);
+	/* transform-origin: top; */
+}
+
+button.btn.btn-background-underline:hover::before {
+	transform: scaleX(1);
+}
+
+
+/**5th button**/
+
+
+button.btn.btn-background-up::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(96, 189, 196);
+	z-index: -1;
+	transition: transform 400ms ease-in-out;
+	transform: scaleY(0);
+	transform-origin: bottom;
+}
+
+.btn {
+	transition: .5s;
+}
+
+button.btn.btn-background-up:hover {
+	color: white;
+	font-weight: bold;
+}
+
+button.btn.btn-background-up:hover::before {
+	transform: scaleY(1);
+}
+
+
+/**6th**/
+
+button.btn.btn-background-upC::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(70, 170, 224);
+	z-index: -1;
+	transition: transform 400ms ease-in-out;
+	transform: scale(0);
+	transform-origin: bottom;
+}
+
+.btn {
+	transition: .5s;
+}
+
+button.btn.btn-background-upC:hover {
+	color: white;
+	font-weight: 400;
+}
+
+button.btn.btn-background-upC:hover::before {
+	transform: scale(1);
+}
+
+
+/**7th**/
+
+button.btn.btn-background-under::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(141, 59, 235);
+	z-index: -1;
+	transition: transform 400ms ease-in-out;
+	transform: scaleX(0);
+	height: 10px;
+
+}
+
+.btn {
+	transition: .5s;
+}
+
+button.btn.btn-background-under:hover {
+	color: white;
+	font-weight: 400;
+}
+
+button.btn.btn-background-under:hover::before {
+	transform: scaleX(1);
+}
+
+
+
+div {
+	text-align: center;
+}
+
+.khusbu-button {
+	background: rgb(228, 167, 157);
+	color: rgb(43, 42, 39);
+	font-weight: 700;
+	position: relative;
+	transition: .4s;
+}
+
+.khusbu-button:hover {
+	color: rgb(19, 38, 53);
+	font-weight: 600;
+	font-size: 19px;
+}
+
+button.btn.btn-background.khusbu-button::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background: rgb(110, 79, 197);
+	height: 10px;
+	z-index: 2;
+	transform: scaleX(0);
+	transition: .5s;
+}
+
+button.btn.btn-background.khusbu-button:hover::before {
+	transform: scaleX(1);
+	margin-bottom: -2px;
+}
