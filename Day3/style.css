@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 1.2rem;
+  background: #090909ed;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+}
+.grid-two-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 2rem;
+
+  & .brand-img {
+    & img {
+      width: 1.5rem;
+      height: auto;
+      object-fit: contain;
+    }
+    & span {
+      font-size: 1.6rem;
+      padding: 0 1.3rem;
+    }
+  }
+}
+/* for nav - side img */
+
+img.nav-back-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  z-index: 3333;
+}
+
+section.section-hero-content {
+  padding-left: 8rem;
+}
+
+.section-hero-text h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.set-target{
+    margin-top: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .set-taget-left{
+       & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+    }
+    & .set-terget-right{
+        & h2{
+            font-size: 4rem;
+        }
+        & p {
+            font-size: 2rem;
+            padding: 2rem 0;
+        }
+        & .store-design{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 11rem;
+            border-radius: 1rem;
+            border: .1rem solid rgb(224, 229, 229);
+            background-color: #cce8fd;
+            & img{
+                width: 25px;
+            }
+            & p {
+                font-size: .9rem;
+                padding: .2rem 0;
+                color: #9393c4;;
+            }
+            & h3{
+                font-size: 1.1rem;
+                padding: 0;
+                padding-bottom: .3rem;
+            }
+        }
+    }
+
+  } 
+
+  section.track-section {position: relative;}
+
+img.bg-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+
+.left-section h2 {
+    font-size: 5rem;
+    line-height: 6rem;
+}
+
+.right-section h3 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #aaa6a6;
+}
+
+.track-section-img {
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.track-section-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding: 0.4rem .5rem;
+}
+.right-section {
+  width: 80%;
+  padding-left: 5rem;
+}
+
+.left-section {
+  width: 100%;
+}
+     
+
+    
+
+.store-design{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 11rem;
+  border-radius: 1rem;
+  border: .1rem solid rgb(224, 229, 229);
+  background-color: #cce8fd;
+  & img{
+      width: 25px;
+  }
+  & p {
+      font-size: .9rem;
+      padding: .2rem 0;
+      color: #9393c4;;
+  }
+  & h3{
+      font-size: 1.1rem;
+      padding: 0;
+      padding-bottom: .3rem;
+  }
+}
+
+section.calories-sec {
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.imgwraper img {
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+section.calories-sec {
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.imgwraper img {
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+.details-section {
+  padding: 0 1rem;
+}
+
+.details-section h2 {
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+p.details {
+  color: #a39f9f;
+  font-size: x-large;
+  padding: 2rem 0;
+}
+
+section.company {
+  margin-top:3rem;
+  padding:0 2rem;
+ & img{
+      width: 100%;
+  height: auto;
+  object-fit: contain;
+ }
+}
+
+
+section.join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9f4ff;
+}
+
+section.join {
+  margin-top: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9f4ff;
+}
+
+.details h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.details {
+  padding-right: 7rem;
+}
+
+section.join .store-design{
+  background-color: #130f49;
+  & h3{
+    color: #fff;
+  }
+}
+
+section.copyright {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #88c5c3;
+  background: aliceblue;
+  padding: 1.3rem 0;
+}
