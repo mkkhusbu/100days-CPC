@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font-Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Food Man</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_header">
+            <div class="logo nav_logo">
+                <a href="#">Food <span>man</span></a>
+            </div>
+            <div class="nav_menu_btn" id="menu-btn">
+                <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+            </div>
+        </div>
+
+        <ul class="nav_links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Special</a></li>
+            <li><a href="#">Chef</a></li>
+            <li><a href="#">Client</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <div class="nav_btn">
+            <button class="btn"><i class="fa fa-lock" ></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="section_container header_container" id="home">
+        <div class="header_image">
+          <img src="./Image/image1.jpg" alt="header image">
+        </div>
+        <div class="header_content">
+            <h2>Meet, Eat & Enjoy <span>True Taste</span></h2>
+            <p class="section_description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex harum alias hic reiciendis, cum aspernatur necessitatibus excepturi odio maxime. Hic?
+            </p>
+            <div class="header_btn btn">Get Started</div>
+        </div>
+    </section>
+
+    <section class="section_container special_container" id="special">
+        <h2 class="section_header">Our Special Dish</h2>
+        <p class="section_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti perspiciatis eveniet nobis eos voluptatem! Suscipit?
+        </p>
+        <div class="special-grid">
+            <div class="special_card">
+                <img src="./Image/delivery3.png" alt="specialAll">
+                <h4>Chicken Veg Curry</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente amet earum ullam consectetur! Impedit.</p>
+                <div class="special_ratings">
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="special_footer">
+                    <p class="price">$12.50</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    menuBtn.addEventListener('click',()=>{
+        navLinks.classList.toggle('open')
+    })
+
+    // window.addEventListener('scroll',()=>{
+    //     if(window.scrollY > 0){
+    //         document.querySelector('nav').classList.add();
+    //     }else{
+    //         document.querySelector('nav').classList
+    //     }
+    // })
+</script>
+
+</body>
+
+</html>
