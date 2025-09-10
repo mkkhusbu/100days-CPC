@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.arif {
+    background: url(./image/anonymus-hacker-computer-mask-wallpaper-preview.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+img.logo {
+    width: 145px;
+    padding: 30px 40px;
+    height: auto;
+}
+
+nav.navbar {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: mediumaquamarine;
+}
+
+
+nav.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav.navbar ul li {
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav.navbar ul li a {
+    font-size: 20px;
+    color: #fff;
+    padding: 6px 13px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav.navbar ul li a:hover {
+    background: red;
+    border-radius: 2px;
+}
+
+.center {
+    position: absolute;
+    left: 51%;
+    top: 420%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.center h1 {
+    color: #ccff00;
+    font-size: 70px;
+    width: 900px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.center h2 {
+    color: #f3fdf2fc;
+    font-size: 60px;
+    font-weight: 300;
+    margin-top: 10px;
+    width: 885px;
+    text-align: center;
+}
+
+button {
+    margin: 35px 280px;
+    /* text-align: center; */
+}
