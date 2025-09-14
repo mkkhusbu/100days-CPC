@@ -1,0 +1,84 @@
+body {
+    margin: 100px;
+}
+
+h1 {
+    color: rgb(255, 18, 1);
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 30px 20px;
+}
+
+.wrapper {
+    margin: 2rem 0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 200px 200px;
+
+}
+
+.box {
+    background-color: tomato;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+
+}
+
+.a {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.b {
+    grid-area: 1/3/3/4;
+}
+
+.c {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.f {
+    grid-area: 2/1/3;
+}
+
+.c {
+    grid-area: 3/2/3/4;
+}
+
+/* Another1 */
+.aa {
+    grid-area: 1/1/2/3;
+}
+
+.ab {
+    grid-area: 1/3/3/4;
+}
+
+.ad {
+    grid-area: 3/2/4/4;
+}
+
+/* Another2 */
+.boxs {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 200%;
+    text-align: center;
+    font-weight: 500;
+}
+.boxs:nth-child(even){
+    background-color: #ff5200;
+}
+.wrapper1 {
+    width: 600px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6,100px);
+}
