@@ -1,0 +1,335 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+span{font-size: .8rem; margin: 0 .6rem;}
+img {
+  width: 100%;
+  height: auto;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+.justyCenter{
+  justify-content: center;
+}
+.justy-center {
+  justify-content: space-between;
+}
+
+.container {
+  width: 1140px;
+
+  margin: 0 auto;
+}
+.btn {
+  padding: 0.4rem 0.8rem;
+  background: #000;
+  color: #fff;
+  border-radius: 3rem;
+  font-weight: 400;
+}
+
+.menu .menu-item li,
+.login .login-items li {
+  padding: 1.3rem;
+}
+
+li.login-btns a {
+  background: #ddddddc4;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2rem;
+}
+
+/* ====Find Your offer====  */
+.hero-bg-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .find-offer-wrapper {
+    position: absolute;
+    background-color: #fff;
+    width: 65%;
+    text-align: center;
+
+    & .f-offer-title-img {
+      width: 300px;
+      margin: 1.7rem auto;
+    }
+  }
+
+  & .offer-option {
+    flex-direction: column;
+    & ul li a img {
+      width: 5px;
+    }
+  }
+}
+
+ul.offer-list li {
+  display: flex;
+  justify-content: space-around;
+  background: #ddd;
+  align-items: center;
+  width: 166px;
+  margin: 0 0.9rem;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  cursor:pointer;
+  & a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+  & img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+  }
+}
+
+ul.second-ofr-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 3rem;
+
+  & li:last-child {
+    width: 153px;
+    background-color: #00EBC7;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0;
+    transition:all 0.3s;
+    cursor:pointer;
+    & a{
+      font-size:1.1rem;
+      transition:all 0.2s linear;
+    }
+    a:hover{
+      color:#fff;
+    }
+  }
+   &  li:last-child:hover{
+      background-color: #1d9c88;
+    }
+  & li:first-child {
+    background: #ddd;
+    width: 528px;
+    padding: 0.2rem 0;
+    border-radius: 0.3rem;
+    & a{
+            text-transform:capitalize;
+            font-size:1.1rem;
+            font-weight:500;
+        }
+  }
+}
+
+/* === Sell FavouritenFunction === */
+.sellFavourite{
+  background-color: #FDE24F;
+  & .sellFavourite-title h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1.8rem 0;
+}
+& .sellFavourite-icon-wrapper img {
+  width: 125px;
+  margin: 0 .7rem;
+  object-fit: contain;
+}
+}
+
+
+.think-about-title h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 3rem 0px;
+}
+
+.think-about-S-Box img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.think-about-S-Box {
+  width: 300px;
+  text-align: center;
+  border: 1px solid #f1e9e961;
+padding-bottom:.7rem;
+transition:all .3s;
+}
+.think-about-S-Box:hover{
+background-color:#ecebeb59;
+box-shadow:1px 2px 4px 1px #a29e9e94;
+}
+.think-about-sb-content h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: .4rem 0;
+}
+
+.think-about-sb-content span {
+  font-size: .88rem;
+  padding: .3rem .4rem .8rem .4rem;
+  display: block;
+  font-weight: 400;
+  line-height: 24.4px;
+}
+
+.think-about-sb-content a {
+  font-size: .9rem;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
+.full-feature-btn {
+text-align: center;
+padding: 3rem 0 0.3rem 0;
+}
+
+.full-feature-btn a {
+font-size: 1.2rem;
+font-weight: 500;
+border: 1px solid #e0d6d6;
+padding: .4rem .6rem;
+border-radius: 2rem;
+background-color: #33333314;
+  transition:.3s;
+}
+.full-feature-btn a:hover{
+  background-color:#caffc0ed;
+  box-shadow:1px 2px 4px 1px #b3b6b3ed;
+}
+
+.blur-img img {
+  width: 45px;
+ 
+}
+.blur-img{
+  margin: .2rem .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-s-box {
+  border: .12rem solid #ddd;
+  border-radius: 0.7rem;
+  margin: 1rem 0;
+}
+
+section.view-buy-sell {
+  border-top: 1px solid #333;
+  margin-top: 1rem;
+  border-bottom: 1px solid #333;
+}
+h3.buy-sell-title {
+  font-weight: 500;
+  padding-top: 2rem;
+}
+
+.sell-box {
+  padding: 0 6rem;
+  width: 100%;
+  border-left: 1px solid #333;
+}
+.buy-box {
+  width: 100%;
+  margin: 0 6rem;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.btn-wrapper a {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+section.text-content-about {
+  background: #CFBAFF;
+  height: 330px;
+  text-align: center;
+}
+
+section.text-content-about span {
+  padding: 4rem 7rem 3rem 7rem;
+  font-size: 2.9rem;
+  display: block;
+  font-weight: 400;
+  line-height: 5rem;
+}
+
+/* ===Foooter section */
+#footer{
+  color: #fff;
+}
+.foot-content-wrapper{
+  padding-top: 2rem;
+  text-align: left;
+}
+footer span{
+  display: block;
+  font-size: .9rem;
+  margin: .3rem;
+  cursor: pointer;
+  color: #fff;
+}
+h3.footer-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.copiroght span {
+  color: #dddbd0;
+}
+
+.copiroght {
+  font-weight: 500;
+  padding: 3rem 3rem;
+  border-top: 1px solid #ddd;
+}
+
+footer {
+  background-color: #333;
+}
+.copiroght span {
+  color: #dddbd0;
+}
+
+.copiroght {
+  font-weight: 500;
+  padding: 3rem 3rem;
+  border-top: 1px solid #ddd;
+}
+
+footer {
+  background-color: #333;
+}
