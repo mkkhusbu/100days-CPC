@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khusbu</title>
+    <style>
+        .MyWatch{
+            border-radius: 5px;
+            background: #9ca88e;
+            width: 370px;
+            text-align: center;
+            padding: 50px;
+            box-shadow: 1px 2px 24px 12px #919797;
+            top: 39%;
+            left: 30%;
+            position: fixed;
+            transition: transform .7s;
+        }
+        .MyWatch:hover{
+            transform: scale(1.4);
+            box-shadow: 1px 2px 24px 12px #619696;
+        }
+        span {
+            font-size: 37px;
+            color: white;
+            font-weight: 700;
+
+        }
+        body{
+            background-color: #9ca88e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="MyWatch">
+        <span class="H"></span><br>
+        <span class="M"></span>
+        <span class="D"></span>
+    </div>
+
+    <script>
+        let myDate = new Date();
+        let hr, min = (myDate.getMinutes() < 10) ? "0" + myDate.getMinutes() : myDate.getMinutes(),
+            sec = (myDate.getSeconds() < 10) ? "0" + myDate.getSeconds() : myDate.getSeconds(),
+            Ampm = (myDate.getHours() < 12) ? 'AM' : 'PM';
+        if (myDate.getHours() == 0) {
+            hr = 12;
+        } else if (myDate.getHours() > 12) {
+            hr = myDate.getHours() - 12;
+        } else {
+            hr = myDate.getHours();
+        }
+
+        let currentTime = hr + " : " + min + ' : ' + sec + ' : ' + Ampm;
+        document.getElementsByClassName('H')[0].innerHTML = currentTime;
+
+        let weekday = ["Sunday", 'Monday', 'Tuesday', 'Wesnesday', 'Thursday', 'Friday', 'Saturday'];
+        let monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        let day = (myDate.getDate()<10)?"0" + myDate.getDate() : myDate.getDate();
+         let currentDay = weekday[myDate.getDay()] + "," + monthName[myDate.getMonth()] +' '+ day;
+
+         document.getElementsByClassName("M")[0].innerHTML = currentDay;
+    </script>
+</body>
+
+</html>
