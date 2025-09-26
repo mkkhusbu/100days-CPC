@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        width: 280px;
+        height: 320px;
+        background: #141212d1;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    section.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+p#countDwon {
+    color: #FFF;
+    font-size: 3.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background: #78785c;
+    padding: 7px 18px;
+    font-size: 15px;
+    color: #f4e1a7;
+    margin: 7px;
+    cursor: pointer;
+    border: 3px solid #5a727d;
+    border-radius: 2px;
+    transition: .3s;
+}
+
+div.buttons {
+    /* display: flex; */
+    flex-basis: fit-content;
+    margin-top: 1rem;
+}
+.resetValue p {
+    color: tomato;
+    font-size: 1.3rem;
+    padding: 10px 0;
+}
+
+button:hover {
+    background: #a7a6a7a1;
+    color: #fff;
+}
+</style>
+
+<body>
+    <section class="wrapper">
+        <div class="container">
+            <p id="countDwon">00</p>
+
+            <div class="buttons">
+                <button class="start_btn">Start</button>
+                <button class="reset_btn">Reset</button>
+                <button class="stop_btn">Stop</button>
+                <button class="time_btn">Get Time</button>
+                <button class="clear_btn">Clear Time</button>
+            </div>
+            <div class="resetValue">
+                <p></p>
+                <!-- <p>The stop time is</p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- <script>
+        const countDownElement = document.getElementById("countDown");
+        const resetValueElement = document.querySelector(".resetValue");
+        let startCount = 0;
+        let intervalId;
+  
+        // Function to start the timer
+        const startTimer = () => {
+          intervalId = setInterval(() => {
+            countDownElement.innerText = startCount++;
+          }, 1000);
+        };
+  
+        // Function to stop the timer and show stop time
+        const stopTimer = () => {
+          showStopValue();
+          clearInterval(intervalId);
+        };
+  
+        // Function to reset the timer
+        const resetTimer = () => {
+          startCount = 0;
+          countDownElement.innerText = startCount;
+          clearInterval(intervalId);
+        };
+  
+        // Function to show stop value
+        const showStopValue = () => {
+          const newPara = document.createElement("p");
+          newPara.innerText = `The stop time is ${startCount - 1}`;
+          resetValueElement.append(newPara);
+        };
+  
+        // Function to show stop time
+        const clearTimeValue = () => {
+          resetValueElement.innerHTML = "";
+        };
+  
+        // Event listeners
+        document
+          .querySelector(".start_btn")
+          .addEventListener("click", startTimer);
+  
+        document
+          .querySelector(".reset_btn")
+          .addEventListener("click", resetTimer);
+  
+        document.querySelector(".stop_btn").addEventListener("click", stopTimer);
+  
+        document
+          .querySelector(".time_btn")
+          .addEventListener("click", showStopValue);
+  
+        document
+          .querySelector(".clear_btn")
+          .addEventListener("click", clearTimeValue);
+      </script> -->
+
+    <script>
+        let countDwon = document.querySelector('#countDwon');
+        let getTimer = document.querySelector(".resetValue p");
+        
+        let startCount = 1;
+        let intervalId;
+
+        let countDwonStart = () =>{
+            // startCount = 1;
+            intervalId = setInterval(()=>{
+                countDwon.innerHTML = startCount++;
+            },1000)
+        }
+        let stopTimer = () =>{
+            clearInterval(intervalId);
+        }
+        let resetBtn = () => {
+            startCount = 0;
+            countDwon.innerHTML = startCount;
+            clearInterval(intervalId);
+
+        }
+
+        let getTime = () => {
+            clearInterval(intervalId);
+            getTimer.textContent = `The stop time is ${startCount - 1}`
+        }
+        let ClearTime = ()=>{
+            getTimer.innerText = "";
+        }
+
+
+        ///====Start Btn ====
+        document
+            .querySelector(".start_btn")
+            .addEventListener('click',countDwonStart);
+
+        ///==== Stop Btn===
+        document
+            .querySelector(".stop_btn")
+            .addEventListener('click',stopTimer)
+        ///====Reset Btn ====
+        document
+            .querySelector(".reset_btn")
+            .addEventListener('click',resetBtn);
+       
+        ///===Get time==
+        document
+            .querySelector(".time_btn")
+            .addEventListener('click',getTime)
+
+            //=== Clear Time 
+       document
+            .querySelector(".clear_btn")
+            .addEventListener('click',ClearTime)
+       // countDwon.addEventListener('click',countDwonStart);
+    </script>
+</body>
+
+</html>
