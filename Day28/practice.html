@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <div class="cotainer">
+        <span class="T">Mk</span><br>
+        <span class="M"></span>
+    </div>
+    <script>
+        function myFunction() {
+            let time = new Date();
+            let hr,min = (time.getMinutes() < 10) ? "0" + time.getMinutes() : time.getMinutes(),
+                sec = (time.getSeconds() < 10) ? "0" + time.getSeconds() : time.getSeconds(),
+                ampm = (time.getHours() < 12) ? "AM" : "PM";
+            if (time.getHours() == 0) {
+                hr = 12;
+            } else if (time.getHours() > 12) {
+                hr = time.getHours() - 12;
+            } else {
+                hr = time.getHours();
+            }
+            let currentTime = `${hr} : ${min} : ${sec} : ${ampm}`;
+            document.getElementsByClassName('T')[0].innerHTML = currentTime;
+            let weekday = ["Sunday", 'Monday', 'Tuesday', 'Wesnesday', 'Thursday', 'Friday', 'Saturday'];
+        let monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let day = (time.getDate() <10) ? '0' + time.getDate() : time.getDate();
+        let dateDetails = weekday[time.getDay()] + ' , ' + day + ' ' + monthName[time.getMonth()];
+        document.getElementsByClassName('M')[0].innerHTML = dateDetails;
+        }
+        myFunction();
+        setInterval(myFunction,1000);
+    </script>
+</body>
+
+</html>
