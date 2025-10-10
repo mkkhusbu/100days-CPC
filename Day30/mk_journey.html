@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK</title>
+</head>
+
+<body style="text-align: center;">
+  <button onclick="prev()">previous</button>
+  <img src="Image/Khusbu.jpg" alt="" width="300px" height="400px" style="object-fit: cover;">
+  <button onclick="next()">Next</button>
+
+  <!-- <script src="mk_khusbu.js"></script> -->
+</body>
+<script>
+let imgArr=["Image/Khusbu.jpg","Image/mahin.jpg","Image/mrk.jpg"];
+let imgTag =document.querySelector("img");
+let count = 0;
+function next(){
+  count++;
+  if(count>=imgArr.length){
+    count = 0;
+    imgTag.src = imgArr[count];
+}else{
+  imgTag.src = imgArr[count];
+}
+}
+function prev(){
+  count--;
+  if(count<0){
+    count =imgArr.length - 1;
+    imgTag.src = imgArr[count];
+  }
+  else{
+    imgTag.src = imgArr[count];
+  }
+}
+ 
+</script>
+
+</html>
