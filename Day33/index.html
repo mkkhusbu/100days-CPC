@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 90%;
+        }
+    form.fram-wraper {
+    width: 500px;
+    background: #dddddd87;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    height: 300px;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 4px;
+    box-shadow: 1px 0px 20px 22px #64646442;
+}
+.input-wraper {
+    filter: fl;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wraper input {
+    margin: 29px 0px;
+}
+
+button#btn {
+    background: tomato;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: auto;
+    border: none;
+    cursor: pointer;
+    padding: 4px 5px;
+    display: block;
+}
+.list-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.added-area{
+    margin: 10px 0;
+}
+    </style>
+</head>
+<body>
+    <form action="" class="fram-wraper">
+        <div class="input-wraper">
+            <label for="framework">Framework</label>
+            <input type="text" name="" id="framework" placeholder="Enter your work">
+            <button id="btn" class="btnAdd">Add</button>
+        </div>
+     
+        <div class="list-wrapper">
+            <label for="list">Added List</label>
+                <select name="" id="list" class="added-area" multiple></select>
+                <button id="btn" class="btnRemove">Remove Item</button>
+        </div>
+    </form>
+
+    <script src="sript.js"></script>
+</body>
+</html>
