@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Todo List</title>
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+      }
+
+      body {
+         background-color: rgb(11 18 13 / 83%);
+      }
+
+      h1 {
+         color: #fff;
+      }
+
+      section.TodoList_wrapper {
+         width: 450px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin: auto;
+         padding-top: 90px;
+      }
+
+      .btn,
+      .deleteBtn {
+         background: #e2e229;
+         padding: 8px 15px;
+         outline: none;
+         border: none;
+         font-size: 17px;
+         font-weight: 500;
+         color: #100f0f;
+         border-radius: 50px;
+         cursor: pointer;
+      }
+
+      input#inputValue {
+         padding: 8px 0;
+         width: 240px;
+         margin-right: 45px;
+         outline: none;
+      }
+
+      .main_todo_div {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-items: center;
+         margin-bottom: 10px;
+      }
+
+      .main_todo_div li {
+         color: #fff;
+         font-size: 20px;
+      }
+
+      .todo-lists-elem {
+         margin-top: 14px;
+      }
+   </style>
+</head>
+
+<body>
+   <section class="TodoList_wrapper">
+      <h1>Todo List</h1>
+      <br>
+      <form action="">
+         <div>
+            <input type="text" id="inputValue">
+            <button class="btn">Add Todo</button>
+         </div>
+         <section class="todo-lists-elem">
+            <!--<div class="main_todo_div">
+            <li>Mango</li> <button class="deleteBtn">Delete</button>
+            </div>
+            <div class="main_todo_div">
+               <li>Mango</li> <button class="deleteBtn">Delete</button>
+            </div> -->
+         </section>
+      </form>
+   </section>
+   <script>
+      let mainTodoList = document.querySelector(".todo-lists-elem");
+      let inputValue = document.querySelector('#inputValue');
+      let btn = document.querySelector(".btn");
+      let getTodoListFromLocal = () => {
+         return JSON.parse(localStorage.getItem("youtubeTodoList"))
+      }
+
+      let LocalTodoLists = getTodoListFromLocal() || [];
+      
+      // ===after delete value wil be added ===
+       let addTodoListLocalStorage = (LocalTodoLists)=>{
+         return localStorage.setItem("youtubeTodoList",JSON.stringify(LocalTodoLists))
+       }
+
+      let addTodoDynamicElem = (curElem) => {
+         let divElement = document.createElement('div');
+         divElement.classList.add('main_todo_div');
+         divElement.innerHTML = `<li>${curElem}</li><button class="deleteBtn">Delete</button>`;
+         mainTodoList.appendChild(divElement);
+      }
+      let addTodoList = (e) => {
+         e.preventDefault();
+         let todoListContent = inputValue.value.trim();
+         inputValue.value = "";
+
+         if (todoListContent !== "" && !LocalTodoLists.includes(todoListContent)) {
+            LocalTodoLists.push(todoListContent);
+            LocalTodoLists = [...new Set(LocalTodoLists)];
+            localStorage.setItem("youtubeTodoList", JSON.stringify(LocalTodoLists));
+
+            addTodoDynamicElem(todoListContent)
+         }
+         // let divElement = document.createElement('div');
+         // divElement.classList.add('main_todo_div');
+         // divElement.innerHTML = `<li>${inputValue.value}</li><button class="deleteBtn">Delete</button>`;
+         // mainTodoList.appendChild(divElement)
+
+      }
+
+      let showTodoList = () => {
+         // console.log(LocalTodoLists)
+         LocalTodoLists.forEach(curElem => {
+            addTodoDynamicElem(curElem);
+         });
+      }
+      showTodoList()
+
+      let removeTodoElem = (e) =>{
+         let removeValue = e.target;
+         let removeListContent = removeValue.previousElementSibling.innerText;
+         let parentEle =removeValue.parentElement;
+         console.log(parentEle)
+
+         LocalTodoLists = LocalTodoLists.filter((curTodo)=>{
+            return curTodo !== removeListContent;
+         })
+         //console.log(LocalTodoLists);
+         parentEle.remove()
+        addTodoListLocalStorage(LocalTodoLists);
+      }
+
+
+      mainTodoList.addEventListener('click',(e)=>{
+         e.preventDefault()
+         if(e.target.classList.contains('deleteBtn')){
+            removeTodoElem(e);
+         }
+      })
+      btn.addEventListener('click', (e) => {
+         addTodoList(e)
+      })
+
+
+
+
+      // const addTodoList = (e) => {
+      //    e.preventDefault();
+      //    let todoListValue = inputValue.value.trim();
+      //    LocalTodoLists.push(todoListValue);
+      //     LocalTodoLists = [...new Set(LocalTodoLists)];
+      //    localStorage.setItem("youtubeTodoList",JSON.stringify(LocalTodoLists));
+      //    console.log(LocalTodoLists)
+
+
+      //   let divElement = document.createElement('div');
+      //    divElement.classList.add("main_todo_div");
+      //    divElement.innerHTML = `<li>${inputValue.value}</li> <button class="deleteBtn">Delete</button>`;
+      //    mainTodoList.appendChild(divElement)
+      // }
+
+      // btn.addEventListener('click', (e) => {
+      //    addTodoList(e)
+      // })
+   </script>
+</body>
+
+</html>
